@@ -34,7 +34,10 @@ def get_norm(
 
     # START TODO #################
     # stack the two inputs at the last axis, then compute the norm over that last axis.
-    raise NotImplementedError
+    Z = np.stack([X,Y])
+    print(np.shape(Z))
+    Z = np.linalg.norm(Z,p,axis=0)
+
     # END TODO ###################
 
     return X, Y, Z
